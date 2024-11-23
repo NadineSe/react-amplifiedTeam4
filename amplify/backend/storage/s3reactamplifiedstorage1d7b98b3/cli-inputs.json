@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3reactamplifiedstorage1d7b98b3",
+  "bucketName": "reactamplified-storage-1d7b98b3",
+  "policyUUID": "18b9b463",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

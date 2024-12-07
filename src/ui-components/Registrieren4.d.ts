@@ -5,8 +5,8 @@
  **************************************************************************/
 
 import * as React from "react";
-import { FlexProps, SelectFieldProps } from "@aws-amplify/ui-react";
-import { ButtonsmallfalsedefaultProps } from "./Buttonsmallfalsedefault";
+import { ButtonProps, FlexProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { EditProfileProps } from "./EditProfile";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -18,13 +18,16 @@ export declare type Variant = {
     overrides: EscapeHatchProps;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type FiltersOverridesProps = {
-    Filters?: PrimitiveOverrideProps<FlexProps>;
-    SelectField38963527?: PrimitiveOverrideProps<SelectFieldProps>;
-    SelectField38963544?: PrimitiveOverrideProps<SelectFieldProps>;
-    "Button/small/false/default"?: ButtonsmallfalsedefaultProps;
+export declare type Registrieren4OverridesProps = {
+    Registrieren4?: PrimitiveOverrideProps<ViewProps>;
+    Button4854624?: PrimitiveOverrideProps<ButtonProps>;
+    EditProfile?: EditProfileProps;
+    Password?: PrimitiveOverrideProps<FlexProps>;
+    placeholder?: PrimitiveOverrideProps<TextProps>;
+    Button4856711?: PrimitiveOverrideProps<ButtonProps>;
+    Passwort?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
-export declare type FiltersProps = React.PropsWithChildren<Partial<FlexProps> & {
-    overrides?: FiltersOverridesProps | undefined | null;
+export declare type Registrieren4Props = React.PropsWithChildren<Partial<ViewProps> & {
+    overrides?: Registrieren4OverridesProps | undefined | null;
 }>;
-export default function Filters(props: FiltersProps): React.ReactElement;
+export default function Registrieren4(props: Registrieren4Props): React.ReactElement;

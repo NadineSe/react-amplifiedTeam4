@@ -70,6 +70,44 @@ export default createTheme({
           },
         },
       },
+      autocomplete: {
+        menu: {
+          width: { value: "100%" },
+          marginBlockStart: { value: "{space.xxxs}" },
+          backgroundColor: { value: "{colors.background.primary}" },
+          borderColor: { value: "{colors.border.primary}" },
+          borderWidth: { value: "{borderWidths.small}" },
+          borderStyle: { value: "solid" },
+          borderRadius: { value: "{radii.small}" },
+          options: {
+            display: { value: "flex" },
+            flexDirection: { value: "column" },
+            maxHeight: { value: "300px" },
+          },
+          option: {
+            backgroundColor: { value: "{colors.background.primary}" },
+            color: { value: "currentcolor" },
+            cursor: { value: "pointer" },
+            transitionDuration: { value: "{time.short}" },
+            transitionProperty: { value: "background-color, color" },
+            transitionTimingFunction: { value: "ease" },
+            _active: {
+              backgroundColor: { value: "{colors.brand.primary.80}" },
+              color: { value: "{colors.white}" },
+            },
+          },
+          _empty: { display: { value: "flex" } },
+          _loading: {
+            alignItems: { value: "center" },
+            display: { value: "flex" },
+            gap: { value: "{space.xxxs}" },
+          },
+          spaceShared: {
+            paddingBlock: { value: "{space.xs}" },
+            paddingInline: { value: "{space.small}" },
+          },
+        },
+      },
       badge: {
         color: { value: "{colors.font.primary.value}" },
         lineHeight: { value: "1" },
@@ -107,6 +145,38 @@ export default createTheme({
           paddingHorizontal: { value: "{space.medium.value}" },
         },
       },
+      breadcrumbs: {
+        flexDirection: { value: "row" },
+        flexWrap: { value: "wrap" },
+        gap: { value: "0" },
+        color: { value: "{colors.font.tertiary}" },
+        item: {
+          flexDirection: { value: "row" },
+          color: { value: "inherit" },
+          fontSize: { value: "inherit" },
+          alignItems: { value: "center" },
+          lineHeight: { value: "1" },
+        },
+        separator: {
+          color: { value: "inherit" },
+          fontSize: { value: "inherit" },
+          paddingInline: { value: "{space.xxs}" },
+        },
+        link: {
+          color: { value: "{components.link.color}" },
+          fontSize: { value: "inherit" },
+          fontWeight: { value: "normal" },
+          textDecoration: { value: "none" },
+          paddingInline: { value: "{space.xs}" },
+          paddingBlock: { value: "{space.xxs}" },
+          current: {
+            color: { value: "inherit" },
+            fontSize: { value: "inherit" },
+            fontWeight: { value: "normal" },
+            textDecoration: { value: "none" },
+          },
+        },
+      },
       button: {
         fontWeight: { value: "{fontWeights.bold.value}" },
         transitionDuration: {
@@ -126,6 +196,7 @@ export default createTheme({
         paddingInlineEnd: {
           value: "{components.fieldcontrol.paddingInlineEnd.value}",
         },
+        backgroundColor: { value: "transparent" },
         borderColor: { value: "{components.fieldcontrol.borderColor.value}" },
         borderWidth: { value: "{components.fieldcontrol.borderWidth.value}" },
         borderStyle: { value: "{components.fieldcontrol.borderStyle.value}" },
@@ -158,6 +229,153 @@ export default createTheme({
           color: { value: "{colors.font.disabled.value}" },
           backgroundColor: { value: "transparent" },
           borderColor: { value: "{colors.border.tertiary.value}" },
+        },
+        outlined: {
+          info: {
+            borderColor: { value: "{colors.blue.60.value}" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.blue.100}" },
+            _hover: {
+              borderColor: { value: "{colors.blue.60.value}" },
+              backgroundColor: { value: "{colors.blue.10.value}" },
+              color: { value: "{colors.blue.100.value}" },
+            },
+            _focus: {
+              borderColor: { value: "{colors.blue.100.value}" },
+              backgroundColor: { value: "{colors.blue.10.value}" },
+              color: { value: "{colors.blue.100.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.blue.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "{colors.blue.100.value}" },
+              backgroundColor: { value: "{colors.blue.20.value}" },
+              color: { value: "{colors.blue.100.value}" },
+            },
+          },
+          warning: {
+            borderColor: { value: "{colors.orange.60.value}" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.orange.100}" },
+            _hover: {
+              borderColor: { value: "{colors.orange.60.value}" },
+              backgroundColor: { value: "{colors.orange.10.value}" },
+              color: { value: "{colors.orange.100.value}" },
+            },
+            _focus: {
+              borderColor: { value: "{colors.orange.100.value}" },
+              backgroundColor: { value: "{colors.orange.10.value}" },
+              color: { value: "{colors.orange.100.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.orange.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "{colors.orange.100.value}" },
+              backgroundColor: { value: "{colors.orange.20.value}" },
+              color: { value: "{colors.orange.100.value}" },
+            },
+          },
+          success: {
+            borderColor: { value: "{colors.green.60.value}" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.green.100}" },
+            _hover: {
+              borderColor: { value: "{colors.green.60.value}" },
+              backgroundColor: { value: "{colors.green.10.value}" },
+              color: { value: "{colors.green.100.value}" },
+            },
+            _focus: {
+              borderColor: { value: "{colors.green.100.value}" },
+              backgroundColor: { value: "{colors.green.10.value}" },
+              color: { value: "{colors.green.100.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.green.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "{colors.green.100.value}" },
+              backgroundColor: { value: "{colors.green.20.value}" },
+              color: { value: "{colors.green.100.value}" },
+            },
+          },
+          error: {
+            borderColor: { value: "{colors.red.60.value}" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.red.100}" },
+            _hover: {
+              borderColor: { value: "{colors.red.60.value}" },
+              backgroundColor: { value: "{colors.red.10.value}" },
+              color: { value: "{colors.red.100.value}" },
+            },
+            _focus: {
+              borderColor: { value: "{colors.red.100.value}" },
+              backgroundColor: { value: "{colors.red.10.value}" },
+              color: { value: "{colors.red.100.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.red.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "{colors.red.100.value}" },
+              backgroundColor: { value: "{colors.red.20.value}" },
+              color: { value: "{colors.red.100.value}" },
+            },
+          },
+          overlay: {
+            borderColor: { value: "{colors.overlay.60.value}" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.font.primary.value}" },
+            _hover: {
+              borderColor: { value: "{colors.overlay.60.value}" },
+              backgroundColor: { value: "{colors.overlay.5.value}" },
+              color: { value: "{colors.neutral.90.value}" },
+            },
+            _focus: {
+              borderColor: { value: "{colors.overlay.90.value}" },
+              backgroundColor: { value: "{colors.overlay.5.value}" },
+              color: { value: "{colors.neutral.90.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.overlay.90.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "{colors.overlay.90.value}" },
+              backgroundColor: { value: "{colors.overlay.10.value}" },
+              color: { value: "{colors.neutral.100.value}" },
+            },
+          },
         },
         primary: {
           borderColor: { value: "transparent" },
@@ -193,9 +411,154 @@ export default createTheme({
             backgroundColor: { value: "{colors.brand.primary.100.value}" },
             color: { value: "{colors.font.inverse.value}" },
           },
+          info: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.blue.80}" },
+            color: { value: "{colors.font.inverse.value}" },
+            _hover: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.blue.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+            },
+            _focus: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.blue.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.blue.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.blue.100.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+            },
+          },
+          warning: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.orange.80}" },
+            color: { value: "{colors.font.inverse.value}" },
+            _hover: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.orange.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+            },
+            _focus: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.orange.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.orange.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.orange.100.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+            },
+          },
+          error: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.red.80}" },
+            color: { value: "{colors.font.inverse.value}" },
+            _hover: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.red.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+            },
+            _focus: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.red.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.red.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.red.100.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+            },
+          },
+          success: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.green.80}" },
+            color: { value: "{colors.font.inverse.value}" },
+            _hover: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.green.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+            },
+            _focus: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.green.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.green.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.green.100.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+            },
+          },
+          overlay: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.overlay.70}" },
+            color: { value: "{colors.font.inverse.value}" },
+            _hover: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.overlay.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+            },
+            _focus: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.overlay.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.overlay.90.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.overlay.90.value}" },
+              color: { value: "{colors.font.inverse.value}" },
+            },
+          },
         },
         menu: {
-          borderWidth: { value: "0" },
+          borderWidth: { value: "{space.zero.value}" },
           backgroundColor: { value: "transparent" },
           justifyContent: { value: "start" },
           _hover: {
@@ -213,9 +576,9 @@ export default createTheme({
           _disabled: { color: { value: "{colors.font.disabled.value}" } },
         },
         link: {
-          borderWidth: { value: "0" },
-          borderColor: { value: "transparent" },
           backgroundColor: { value: "transparent" },
+          borderColor: { value: "transparent" },
+          borderWidth: { value: "{borderWidths.small.value}" },
           color: { value: "{colors.font.interactive.value}" },
           _hover: {
             borderColor: { value: "transparent" },
@@ -244,6 +607,220 @@ export default createTheme({
             borderColor: { value: "transparent" },
             backgroundColor: { value: "transparent" },
             color: { value: "{colors.font.disabled.value}" },
+          },
+          info: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.blue.100}" },
+            _hover: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.blue.10.value}" },
+              color: { value: "{colors.blue.90.value}" },
+            },
+            _focus: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.blue.10.value}" },
+              color: { value: "{colors.blue.100.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.blue.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.blue.20.value}" },
+              color: { value: "{colors.blue.100.value}" },
+            },
+          },
+          warning: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.orange.100}" },
+            _hover: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.orange.10.value}" },
+              color: { value: "{colors.orange.90.value}" },
+            },
+            _focus: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.orange.10.value}" },
+              color: { value: "{colors.orange.100.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.orange.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.orange.20.value}" },
+              color: { value: "{colors.orange.100.value}" },
+            },
+          },
+          success: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.green.100}" },
+            _hover: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.green.10.value}" },
+              color: { value: "{colors.green.90.value}" },
+            },
+            _focus: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.green.10.value}" },
+              color: { value: "{colors.green.100.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.green.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.green.20.value}" },
+              color: { value: "{colors.green.100.value}" },
+            },
+          },
+          error: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.red.100}" },
+            _hover: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.red.10.value}" },
+              color: { value: "{colors.red.90.value}" },
+            },
+            _focus: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.red.10.value}" },
+              color: { value: "{colors.red.100.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.red.100.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.red.20.value}" },
+              color: { value: "{colors.red.100.value}" },
+            },
+          },
+          overlay: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.neutral.100}" },
+            _hover: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.overlay.5.value}" },
+              color: { value: "{colors.overlay.80.value}" },
+            },
+            _focus: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.overlay.5.value}" },
+              color: { value: "{colors.overlay.90.value}" },
+              boxShadow: {
+                value: {
+                  offsetX: "0px",
+                  offsetY: "0px",
+                  blurRadius: "0px",
+                  spreadRadius: "1px",
+                  color: "{colors.overlay.90.value}",
+                },
+              },
+            },
+            _active: {
+              borderColor: { value: "transparent" },
+              backgroundColor: { value: "{colors.overlay.10.value}" },
+              color: { value: "{colors.overlay.90.value}" },
+            },
+          },
+        },
+        warning: {
+          backgroundColor: { value: "transparent" },
+          borderColor: { value: "{colors.red.60}" },
+          borderWidth: { value: "{borderWidths.small}" },
+          color: { value: "{colors.red.60}" },
+          _hover: {
+            borderColor: { value: "{colors.red.80}" },
+            backgroundColor: { value: "{colors.red.10}" },
+            color: { value: "{colors.font.error}" },
+          },
+          _focus: {
+            borderColor: { value: "{colors.red.80}" },
+            backgroundColor: { value: "{colors.red.10}" },
+            color: { value: "{colors.red.80}" },
+            boxShadow: {
+              value: "{components.fieldcontrol._error._focus.boxShadow}",
+            },
+          },
+          _active: {
+            borderColor: { value: "{colors.red.100}" },
+            backgroundColor: { value: "{colors.red.20}" },
+            color: { value: "{colors.red.100}" },
+          },
+          _disabled: {
+            borderColor: { value: "{colors.border.tertiary}" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.font.disabled}" },
+          },
+          _loading: {
+            borderColor: { value: "{colors.border.tertiary}" },
+            backgroundColor: { value: "transparent" },
+            color: { value: "{colors.font.disabled}" },
+          },
+        },
+        destructive: {
+          borderColor: { value: "transparent" },
+          borderWidth: { value: "{borderWidths.small}" },
+          borderStyle: { value: "solid" },
+          backgroundColor: { value: "{colors.red.60}" },
+          color: { value: "{colors.font.inverse}" },
+          _disabled: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.background.disabled}" },
+            color: { value: "{colors.font.disabled}" },
+          },
+          _loading: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.background.disabled}" },
+            color: { value: "{colors.font.disabled}" },
+          },
+          _hover: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.red.80}" },
+            color: { value: "{colors.font.inverse}" },
+          },
+          _focus: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.red.80}" },
+            color: { value: "{colors.font.inverse}" },
+            boxShadow: {
+              value: "{components.fieldcontrol._error._focus.boxShadow}",
+            },
+          },
+          _active: {
+            borderColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.red.100}" },
+            color: { value: "{colors.font.inverse}" },
           },
         },
         small: {
@@ -314,7 +891,7 @@ export default createTheme({
           position: { value: "relative" },
           alignItems: { value: "center" },
           justifyContent: { value: "center" },
-          color: { value: "{colors.white.value}" },
+          color: { value: "{colors.font.inverse.value}" },
           before: {
             width: { value: "100%" },
             height: { value: "100%" },
@@ -373,6 +950,13 @@ export default createTheme({
               backgroundColor: { value: "{colors.background.disabled.value}" },
             },
           },
+          _indeterminate: {
+            opacity: { value: "{opacities.100.value}" },
+            transform: { value: "scale(1)" },
+            _disabled: {
+              backgroundColor: { value: "{colors.background.disabled.value}" },
+            },
+          },
         },
         label: {
           _disabled: { color: { value: "{colors.font.disabled.value}" } },
@@ -384,17 +968,7 @@ export default createTheme({
         flexDirection: { value: "column" },
         justifyContent: { value: "center" },
       },
-      copy: {
-        fontSize: { value: "{fontSizes.xs}" },
-        gap: { value: "{space.relative.medium}" },
-        svg: { path: { fill: { value: "{colors.font.primary}" } } },
-        toolTip: {
-          bottom: { value: "{space.large}" },
-          color: { value: "{colors.teal.100}" },
-          fontSize: { value: "{fontSizes.xxs}" },
-        },
-      },
-      countrycodeselect: { height: { value: "100%" } },
+      countrycodeselect: { height: { value: "{space.relative.full.value}" } },
       divider: {
         borderStyle: { value: "solid" },
         borderColor: { value: "{colors.border.primary.value}" },
@@ -409,82 +983,10 @@ export default createTheme({
         large: { borderWidth: { value: "{borderWidths.large.value}" } },
         opacity: { value: "{opacities.60.value}" },
       },
-      expander: {
-        display: { value: "block" },
-        backgroundColor: { value: "{colors.white.value}" },
-        borderRadius: { value: "{radii.medium.value}" },
-        boxShadow: { value: "{shadows.large.value}" },
-        width: { value: "100%" },
-        item: {
-          marginTop: { value: "1px" },
-          boxShadow: { value: "{shadows.small.value}" },
-          borderBottomLeftRadius: { value: "{radii.medium.value}" },
-          borderBottomRightRadius: { value: "{radii.medium.value}" },
-          borderTopLeftRadius: { value: "{radii.medium.value}" },
-          borderTopRightRadius: { value: "{radii.medium.value}" },
-          borderStartStartRadius: { value: "{radii.medium.value}" },
-          borderStartEndRadius: { value: "{radii.medium.value}" },
-          borderEndStartRadius: { value: "{radii.medium.value}" },
-          borderEndEndRadius: { value: "{radii.medium.value}" },
-          _focus: {
-            boxShadow: {
-              value: {
-                offsetX: "0",
-                offsetY: "0",
-                blurRadius: "0",
-                spreadRadius: "2px",
-                color: "{colors.border.focus.value}",
-              },
-            },
-          },
-        },
-        header: {
-          boxShadow: {
-            value: {
-              offsetX: "0",
-              offsetY: "1px",
-              blurRadius: "0",
-              color: "{colors.overlay.20.value}",
-            },
-          },
-        },
-        trigger: {
-          minHeight: { value: "3rem" },
-          paddingInlineStart: { value: "{space.large.value}" },
-          paddingInlineEnd: { value: "{space.large.value}" },
-          alignItems: { value: "center" },
-          justifyContent: { value: "space-between" },
-          _hover: { backgroundColor: { value: "{colors.overlay.10.value}" } },
-        },
-        content: {
-          paddingInlineStart: { value: "{space.large.value}" },
-          paddingInlineEnd: { value: "{space.large.value}" },
-          text: {
-            color: { value: "{colors.font.secondary.value}" },
-            paddingBlockStart: { value: "{space.medium.value}" },
-            paddingBlockEnd: { value: "{space.medium.value}" },
-          },
-          _open: {
-            animationDuration: { value: "{time.medium.value}" },
-            animationTimingFunction: {
-              value: "cubic-bezier(0.87, 0, 0.13, 1)",
-            },
-          },
-          _closed: {
-            animationDuration: { value: "{time.medium.value}" },
-            animationTimingFunction: {
-              value: "cubic-bezier(0.87, 0, 0.13, 1)",
-            },
-          },
-        },
-        icon: {
-          transitionDuration: { value: "{time.medium.value}" },
-          transitionTimingFunction: { value: "cubic-bezier(0.87, 0, 0.13, 1)" },
-        },
-      },
       field: {
         gap: { value: "{space.xs.value}" },
         fontSize: { value: "{fontSizes.medium.value}" },
+        flexDirection: { value: "column" },
         small: {
           gap: { value: "{space.xxxs.value}" },
           fontSize: { value: "{fontSizes.small.value}" },
@@ -528,10 +1030,6 @@ export default createTheme({
         },
         quiet: {
           borderStyle: { value: "none" },
-          borderBlockEnd: {
-            value:
-              "{borderWidths.small.value} solid {colors.border.primary.value}",
-          },
           borderInlineStart: { value: "none" },
           borderInlineEnd: { value: "none" },
           borderBlockStart: { value: "none" },
@@ -543,6 +1041,7 @@ export default createTheme({
                 offsetX: "0px",
                 offsetY: "1px",
                 color: "{colors.border.focus.value}",
+                blurRadius: "0px",
               },
             },
           },
@@ -554,6 +1053,7 @@ export default createTheme({
                   offsetX: "0px",
                   offsetY: "1px",
                   color: "{colors.border.error.value}",
+                  blurRadius: "0px",
                 },
               },
             },
@@ -579,6 +1079,7 @@ export default createTheme({
         },
         _error: {
           borderColor: { value: "{colors.border.error.value}" },
+          color: { value: "{colors.font.error.value}" },
           _focus: {
             boxShadow: {
               value: {
@@ -593,7 +1094,7 @@ export default createTheme({
         },
       },
       fieldgroup: {
-        gap: { value: "0" },
+        gap: { value: "{space.zero.value}" },
         vertical: { alignItems: { value: "center" } },
         outer: { alignItems: { value: "center" } },
       },
@@ -607,6 +1108,34 @@ export default createTheme({
           fontStyle: { value: "italic" },
           fontSize: { value: "{fontSizes.small.value}" },
         },
+      },
+      fieldset: {
+        backgroundColor: { value: "transparent" },
+        borderRadius: { value: "{radii.xs.value}" },
+        flexDirection: { value: "column" },
+        gap: { value: "{components.field.gap.value}" },
+        legend: {
+          color: { value: "{colors.font.primary.value}" },
+          fontSize: { value: "{components.field.fontSize.value}" },
+          fontWeight: { value: "{fontWeights.bold.value}" },
+          lineHeight: { value: "{lineHeights.medium.value}" },
+          small: {
+            fontSize: { value: "{components.field.small.fontSize.value}" },
+          },
+          large: {
+            fontSize: { value: "{components.field.large.fontSize.value}" },
+          },
+        },
+        outlined: {
+          padding: { value: "{space.medium.value}" },
+          borderColor: { value: "{colors.neutral.40.value}" },
+          borderWidth: { value: "{borderWidths.small.value}" },
+          borderStyle: { value: "solid" },
+          small: { padding: { value: "{space.small.value}" } },
+          large: { padding: { value: "{space.large.value}" } },
+        },
+        small: { gap: { value: "{components.field.small.gap.value}" } },
+        large: { gap: { value: "{components.field.large.gap.value}" } },
       },
       flex: {
         gap: { value: "{space.medium.value}" },
@@ -650,13 +1179,21 @@ export default createTheme({
         objectFit: { value: "initial" },
         objectPosition: { value: "initial" },
       },
+      input: {
+        color: { value: "{components.fieldcontrol.color.value}" },
+        borderColor: { value: "{components.fieldcontrol.borderColor.value}" },
+        fontSize: { value: "{components.fieldcontrol.fontSize.value}" },
+        _focus: {
+          borderColor: {
+            value: "{components.fieldcontrol._focus.borderColor.value}",
+          },
+        },
+      },
       link: {
         active: { color: { value: "{colors.font.active.value}" } },
         color: { value: "{colors.font.interactive.value}" },
         focus: { color: { value: "{colors.font.focus.value}" } },
         hover: { color: { value: "{colors.font.hover.value}" } },
-        large: { fontSize: { value: "{fontSizes.large.value}" } },
-        small: { fontSize: { value: "{fontSizes.small.value}" } },
         visited: { color: { value: "{colors.font.interactive.value}" } },
       },
       loader: {
@@ -680,53 +1217,122 @@ export default createTheme({
         linear: {
           width: { value: "100%" },
           minWidth: { value: "5rem" },
-          fontSize: { value: "{fontSizes.medium.value}" },
-          strokeWidth: { value: "{fontSizes.medium.value}" },
+          fontSize: { value: "{fontSizes.xxs.value}" },
+          strokeWidth: { value: "{fontSizes.xxs.value}" },
           strokeFilled: { value: "{colors.brand.primary.80.value}" },
           strokeEmpty: { value: "{colors.neutral.20.value}" },
           strokeLinecap: { value: "round" },
           animationDuration: { value: "1s" },
           small: {
-            strokeWidth: { value: "{fontSizes.small.value}" },
-            fontSize: { value: "{fontSizes.small.value}" },
+            strokeWidth: { value: "{fontSizes.xxxs.value}" },
+            fontSize: { value: "{fontSizes.xxxs.value}" },
           },
           large: {
-            strokeWidth: { value: "{fontSizes.large.value}" },
-            fontSize: { value: "{fontSizes.large.value}" },
+            strokeWidth: { value: "{fontSizes.xs.value}" },
+            fontSize: { value: "{fontSizes.xs.value}" },
           },
         },
         text: { fill: { value: "{colors.font.primary.value}" } },
       },
-      menu: {
-        backgroundColor: { value: "{colors.white.value}" },
-        borderRadius: { value: "{radii.medium.value}" },
-        borderWidth: { value: "{borderWidths.small.value}" },
+      message: {
+        alignItems: { value: "center" },
+        backgroundColor: { value: "{colors.background.tertiary.value}" },
+        borderColor: { value: "transparent" },
         borderStyle: { value: "solid" },
-        borderColor: { value: "{colors.border.primary.value}" },
-        boxShadow: { value: "{shadows.large.value}" },
-        flexDirection: { value: "column" },
-        gap: { value: "0" },
-        maxWidth: { value: "30rem" },
-        minWidth: { value: "14rem" },
-        small: {
-          width: { value: "{fontSizes.medium.value}" },
-          height: { value: "{fontSizes.medium.value}" },
+        borderWidth: { value: "{borderWidths.small.value}" },
+        borderRadius: { value: "{radii.xs.value}" },
+        color: { value: "{colors.font.primary.value}" },
+        justifyContent: { value: "flex-start" },
+        paddingBlock: { value: "{space.small.value}" },
+        paddingInline: { value: "{space.medium.value}" },
+        lineHeight: { value: "{lineHeights.small.value}" },
+        icon: { size: { value: "{fontSizes.xl.value}" } },
+        heading: {
+          fontSize: { value: "{fontSizes.medium.value}" },
+          fontWeight: { value: "{fontWeights.bold.value}" },
         },
-        large: {
-          width: { value: "{fontSizes.xxxl.value}" },
-          height: { value: "{fontSizes.xxxl.value}" },
+        dismiss: { gap: { value: "{space.xxs.value}" } },
+        plain: {
+          color: { value: "{colors.font.primary.value}" },
+          backgroundColor: { value: "{colors.background.primary.value}" },
+          borderColor: { value: "transparent" },
+          info: {
+            color: { value: "{colors.font.info.value}" },
+            backgroundColor: { value: "{colors.background.primary.value}" },
+            borderColor: { value: "transparent" },
+          },
+          error: {
+            color: { value: "{colors.font.error.value}" },
+            backgroundColor: { value: "{colors.background.primary.value}" },
+            borderColor: { value: "transparent" },
+          },
+          success: {
+            color: { value: "{colors.font.success.value}" },
+            backgroundColor: { value: "{colors.background.primary.value}" },
+            borderColor: { value: "transparent" },
+          },
+          warning: {
+            color: { value: "{colors.font.warning.value}" },
+            backgroundColor: { value: "{colors.background.primary.value}" },
+            borderColor: { value: "transparent" },
+          },
         },
-        item: {
-          minHeight: { value: "2.5rem" },
-          paddingInlineStart: { value: "{space.medium.value}" },
-          paddingInlineEnd: { value: "{space.medium.value}" },
+        outlined: {
+          color: { value: "{colors.font.primary.value}" },
+          backgroundColor: { value: "{colors.background.primary.value}" },
+          borderColor: { value: "{colors.border.primary.value}" },
+          info: {
+            color: { value: "{colors.font.info.value}" },
+            backgroundColor: { value: "{colors.background.primary.value}" },
+            borderColor: { value: "{colors.border.info.value}" },
+          },
+          error: {
+            color: { value: "{colors.font.error.value}" },
+            backgroundColor: { value: "{colors.background.primary.value}" },
+            borderColor: { value: "{colors.border.error.value}" },
+          },
+          success: {
+            color: { value: "{colors.font.success.value}" },
+            backgroundColor: { value: "{colors.background.primary.value}" },
+            borderColor: { value: "{colors.border.success.value}" },
+          },
+          warning: {
+            color: { value: "{colors.font.warning.value}" },
+            backgroundColor: { value: "{colors.background.primary.value}" },
+            borderColor: { value: "{colors.border.warning.value}" },
+          },
+        },
+        filled: {
+          color: { value: "{colors.font.primary.value}" },
+          backgroundColor: { value: "{colors.background.secondary.value}" },
+          borderColor: { value: "transparent" },
+          info: {
+            color: { value: "{colors.font.info.value}" },
+            backgroundColor: { value: "{colors.background.info.value}" },
+            borderColor: { value: "transparent" },
+          },
+          error: {
+            color: { value: "{colors.font.error.value}" },
+            backgroundColor: { value: "{colors.background.error.value}" },
+            borderColor: { value: "transparent" },
+          },
+          success: {
+            color: { value: "{colors.font.success.value}" },
+            backgroundColor: { value: "{colors.background.success.value}" },
+            borderColor: { value: "transparent" },
+          },
+          warning: {
+            color: { value: "{colors.font.warning.value}" },
+            backgroundColor: { value: "{colors.background.warning.value}" },
+            borderColor: { value: "transparent" },
+          },
         },
       },
       pagination: {
         current: {
           alignItems: { value: "center" },
           justifyContent: { value: "center" },
-          color: { value: "{colors.white.value}" },
+          color: { value: "{colors.font.inverse.value}" },
           fontSize: { value: "{fontSizes.small.value}" },
           backgroundColor: { value: "{colors.overlay.40.value}" },
         },
@@ -758,7 +1364,58 @@ export default createTheme({
           borderRadius: { value: "{fontSizes.medium.value}" },
         },
       },
-      phonenumberfield: {},
+      passwordfield: {
+        color: { value: "{components.fieldcontrol.color.value}" },
+        button: {
+          color: { value: "{components.button.color.value}" },
+          _active: {
+            backgroundColor: {
+              value: "{components.button._active.backgroundColor.value}",
+            },
+            borderColor: {
+              value: "{components.button._active.borderColor.value}",
+            },
+            color: { value: "{components.button._active.color.value}" },
+          },
+          _disabled: {
+            backgroundColor: {
+              value: "{components.button._disabled.backgroundColor.value}",
+            },
+            borderColor: {
+              value: "{components.button._disabled.borderColor.value}",
+            },
+            color: { value: "{components.button._disabled.color.value}" },
+          },
+          _focus: {
+            backgroundColor: {
+              value: "{components.button._focus.backgroundColor.value}",
+            },
+            borderColor: {
+              value: "{components.button._focus.borderColor.value}",
+            },
+            color: { value: "{components.button._focus.color.value}" },
+          },
+          _hover: {
+            backgroundColor: {
+              value: "{components.button._hover.backgroundColor.value}",
+            },
+            borderColor: {
+              value: "{components.button._hover.borderColor.value}",
+            },
+            color: { value: "{components.button._hover.color.value}" },
+          },
+        },
+      },
+      phonenumberfield: {
+        color: { value: "{components.fieldcontrol.color}" },
+        borderColor: { value: "{components.fieldcontrol.borderColor}" },
+        fontSize: { value: "{components.fieldcontrol.fontSize}" },
+        _focus: {
+          borderColor: {
+            value: "{components.fieldcontrol._focus.borderColor}",
+          },
+        },
+      },
       placeholder: {
         borderRadius: { value: "{radii.small.value}" },
         transitionDuration: { value: "{time.long.value}" },
@@ -783,8 +1440,8 @@ export default createTheme({
           borderStyle: { value: "solid" },
           borderRadius: { value: "50%" },
           borderColor: { value: "{colors.border.primary.value}" },
-          color: { value: "{colors.white.value}" },
-          backgroundColor: { value: "{colors.white.value}" },
+          color: { value: "{colors.background.primary.value}" },
+          backgroundColor: { value: "{colors.background.primary.value}" },
           transitionProperty: { value: "all" },
           transitionDuration: { value: "{time.medium.value}" },
           outlineColor: { value: "{colors.transparent.value}" },
@@ -827,7 +1484,21 @@ export default createTheme({
           },
         },
         label: {
+          color: { value: "{components.text.color.value}" },
           _disabled: { color: { value: "{colors.font.disabled.value}" } },
+        },
+      },
+      radiogroup: {
+        radio: {
+          borderWidth: { value: "{components.radio.button.borderWidth}" },
+          borderColor: { value: "{components.radio.button.borderColor}" },
+          backgroundColor: {
+            value: "{components.radio.button.backgroundColor}",
+          },
+          _checked: {
+            color: { value: "{components.radio.button._checked.color}" },
+          },
+          label: { color: { value: "{components.radio.label.color}" } },
         },
       },
       rating: {
@@ -837,8 +1508,57 @@ export default createTheme({
         filled: { color: { value: "{colors.brand.secondary.80.value}" } },
         empty: { color: { value: "{colors.background.tertiary.value}" } },
       },
+      searchfield: {
+        color: { value: "{components.fieldcontrol.color.value}" },
+        button: {
+          color: { value: "{components.button.color.value}" },
+          backgroundColor: { value: "{colors.background.primary.value}" },
+          _active: {
+            backgroundColor: {
+              value: "{components.button._active.backgroundColor.value}",
+            },
+            borderColor: {
+              value: "{components.button._active.borderColor.value}",
+            },
+            color: { value: "{components.button._active.color.value}" },
+          },
+          _disabled: {
+            backgroundColor: {
+              value: "{components.button._disabled.backgroundColor.value}",
+            },
+            borderColor: {
+              value: "{components.button._disabled.borderColor.value}",
+            },
+            color: { value: "{components.button._disabled.color.value}" },
+          },
+          _focus: {
+            backgroundColor: {
+              value: "{components.button._focus.backgroundColor.value}",
+            },
+            borderColor: {
+              value: "{components.button._focus.borderColor.value}",
+            },
+            color: { value: "{components.button._focus.color.value}" },
+          },
+          _hover: {
+            backgroundColor: {
+              value: "{components.button._hover.backgroundColor.value}",
+            },
+            borderColor: {
+              value: "{components.button._hover.borderColor.value}",
+            },
+            color: { value: "{components.button._hover.color.value}" },
+          },
+        },
+      },
       select: {
+        color: { value: "{components.fieldcontrol.color}" },
+        backgroundColor: { value: "{colors.background.primary.value}" },
         paddingInlineEnd: { value: "{space.xxl.value}" },
+        _disabled: {
+          color: { value: "{colors.font.disabled.value}" },
+          backgroundColor: { value: "{colors.background.disabled.value}" },
+        },
         wrapper: {
           flex: { value: "1" },
           display: { value: "block" },
@@ -852,20 +1572,52 @@ export default createTheme({
           right: { value: "{space.medium.value}" },
           transform: { value: "translateY(-50%)" },
           pointerEvents: { value: "none" },
+          small: { right: { value: "{space.xs.value}" } },
+          large: { right: { value: "{space.medium.value}" } },
         },
         option: {
-          backgroundColor: { value: "{colors.background.primary.value}" },
+          backgroundColor: { value: "transparent" },
+          color: { value: "{colors.font.primary.value}" },
+          _disabled: {
+            color: { value: "{colors.font.disabled.value}" },
+            backgroundColor: { value: "transparent" },
+          },
         },
         whiteSpace: { value: "nowrap" },
         minWidth: { value: "6.5rem" },
-        small: { minWidth: { value: "5.5rem" } },
-        large: { minWidth: { value: "7.5rem" } },
+        small: {
+          minWidth: { value: "5.5rem" },
+          paddingInlineEnd: { value: "{space.xl.value}" },
+        },
+        large: {
+          minWidth: { value: "7.5rem" },
+          paddingInlineEnd: { value: "{space.xxl.value}" },
+        },
+        expanded: {
+          paddingBlock: { value: "{space.xs.value}" },
+          paddingInline: { value: "{space.small.value}" },
+          option: {
+            paddingBlock: { value: "{space.xs.value}" },
+            paddingInline: { value: "{space.small.value}" },
+          },
+        },
       },
-      selectfield: { flexDirection: { value: "column" } },
+      selectfield: {
+        borderColor: { value: "{components.fieldcontrol.borderColor}" },
+        color: { value: "{components.fieldcontrol.color}" },
+        flexDirection: { value: "column" },
+        fontSize: { value: "{components.fieldcontrol.fontSize}" },
+        _focus: {
+          borderColor: {
+            value: "{components.fieldcontrol._focus.borderColor}",
+          },
+        },
+        label: { color: { value: "{components.field.label.color}" } },
+      },
       sliderfield: {
         paddingBlock: { value: "{space.xs.value}" },
         track: {
-          backgroundColor: { value: "{colors.background.tertiary.value}" },
+          backgroundColor: { value: "{colors.background.quaternary.value}" },
           borderRadius: { value: "9999px" },
           height: { value: "0.375rem" },
           minWidth: { value: "10rem" },
@@ -883,7 +1635,7 @@ export default createTheme({
           backgroundColor: { value: "{colors.background.primary.value}" },
           boxShadow: { value: "{shadows.small.value}" },
           borderRadius: { value: "50%" },
-          borderWidth: { value: "{borderWidths.small.value}" },
+          borderWidth: { value: "{borderWidths.medium.value}" },
           borderColor: { value: "{colors.border.primary.value}" },
           borderStyle: { value: "solid" },
           _disabled: {
@@ -896,12 +1648,13 @@ export default createTheme({
             borderColor: { value: "{colors.border.focus.value}" },
           },
           _focus: {
+            borderColor: { value: "{colors.border.focus.value}" },
             boxShadow: {
               value: {
                 offsetX: "0",
                 offsetY: "0",
                 blurRadius: "0",
-                spreadRadius: "3px",
+                spreadRadius: "2px",
                 color: "{colors.border.focus.value}",
               },
             },
@@ -917,33 +1670,82 @@ export default createTheme({
         },
       },
       stepperfield: {
+        borderColor: { value: "{components.fieldcontrol.borderColor}" },
         flexDirection: { value: "column" },
-        input: { textAlign: { value: "center" } },
+        input: {
+          color: { value: "{components.fieldcontrol.color}" },
+          fontSize: { value: "{components.fieldcontrol.fontSize}" },
+          textAlign: { value: "center" },
+        },
+        button: {
+          color: { value: "{components.button.color}" },
+          backgroundColor: { value: "{colors.transparent}" },
+          _active: {
+            color: { value: "{components.button._active.color}" },
+            backgroundColor: {
+              value: "{components.button._active.backgroundColor}",
+            },
+          },
+          _focus: {
+            color: { value: "{components.button._focus.color}" },
+            backgroundColor: {
+              value: "{components.button._focus.backgroundColor}",
+            },
+          },
+          _disabled: {
+            color: { value: "{components.button._disabled.color}" },
+            backgroundColor: {
+              value: "{components.fieldcontrol._disabled.backgroundColor}",
+            },
+          },
+          _hover: {
+            color: { value: "{components.button._hover.color}" },
+            backgroundColor: {
+              value: "{components.button._hover.backgroundColor}",
+            },
+          },
+        },
       },
       switchfield: {
-        disabled: { opacity: { value: "{opacities.60.value}" } },
-        focused: { shadow: { value: "{shadows.small.value}" } },
+        _disabled: { opacity: { value: "{opacities.60.value}" } },
+        _focused: {
+          shadow: {
+            value: {
+              offsetX: "0px",
+              offsetY: "0px",
+              blurRadius: "0px",
+              spreadRadius: "2px",
+              color: "{colors.border.focus.value}",
+            },
+          },
+        },
+        fontSize: { value: "{fontSizes.medium.value}" },
         large: { fontSize: { value: "{fontSizes.large.value}" } },
         small: { fontSize: { value: "{fontSizes.small.value}" } },
         label: { padding: { value: "{space.xs.value}" } },
         thumb: {
           backgroundColor: { value: "{colors.background.primary.value}" },
-          borderColor: { value: "{colors.border.tertiary.value}" },
+          borderColor: { value: "transparent" },
+          borderWidth: { value: "{borderWidths.small.value}" },
+          borderStyle: { value: "solid" },
           borderRadius: { value: "{radii.xxxl.value}" },
           checked: { transform: { value: "{transforms.slideX.medium.value}" } },
           transition: { duration: { value: "{time.medium.value}" } },
           width: { value: "{space.relative.medium.value}" },
         },
         track: {
-          backgroundColor: { value: "{colors.background.tertiary.value}" },
+          backgroundColor: { value: "{colors.background.quaternary.value}" },
           borderRadius: { value: "{radii.xxxl.value}" },
           checked: {
-            backgroundColor: { value: "{colors.brand.primary.60.value}" },
+            backgroundColor: { value: "{colors.brand.primary.80.value}" },
           },
           height: { value: "{space.relative.medium.value}" },
           padding: { value: "{outlineWidths.medium.value}" },
           transition: { duration: { value: "{time.short.value}" } },
           width: { value: "{space.relative.xl.value}" },
+          _error: {
+            backgroundColor: { value: "{colors.background.error.value}" },
+          },
         },
       },
       table: {
@@ -1063,21 +1865,41 @@ export default createTheme({
         success: { color: { value: "{colors.font.success.value}" } },
         info: { color: { value: "{colors.font.info.value}" } },
       },
+      textareafield: {
+        color: { value: "{components.fieldcontrol.color.value}" },
+        borderColor: { value: "{components.fieldcontrol.borderColor.value}" },
+        _focus: {
+          borderColor: {
+            value: "{components.fieldcontrol._focus.borderColor.value}",
+          },
+        },
+      },
+      textfield: {
+        color: { value: "{components.fieldcontrol.color.value}" },
+        borderColor: { value: "{components.fieldcontrol.borderColor.value}" },
+        fontSize: { value: "{components.fieldcontrol.fontSize.value}" },
+        _focus: {
+          borderColor: {
+            value: "{components.fieldcontrol._focus.borderColor.value}",
+          },
+        },
+      },
       togglebutton: {
         borderColor: { value: "{colors.border.primary.value}" },
-        color: { value: "{colors.overlay.50.value}" },
+        color: { value: "{colors.font.primary.value}" },
         _hover: { backgroundColor: { value: "{colors.overlay.10.value}" } },
         _focus: {
           borderColor: { value: "{colors.border.focus.value}" },
-          color: { value: "{colors.overlay.50.value}" },
+          color: { value: "{colors.font.primary.value}" },
         },
         _active: { backgroundColor: { value: "{colors.transparent.value}" } },
         _disabled: {
           backgroundColor: { value: "{colors.transparent.value}" },
-          borderColor: { value: "{colors.border.secondary.value}" },
+          borderColor: { value: "{colors.border.disabled.value}" },
           color: { value: "{colors.font.disabled.value}" },
         },
         _pressed: {
+          borderColor: { value: "{colors.border.pressed.value}" },
           color: { value: "{colors.font.primary.value}" },
           backgroundColor: { value: "{colors.overlay.20.value}" },
           _hover: { backgroundColor: { value: "{colors.overlay.30.value}" } },
@@ -1091,31 +1913,36 @@ export default createTheme({
             boxShadow: {
               value: "{components.fieldcontrol._focus.boxShadow.value}",
             },
-            color: { value: "{colors.overlay.50.value}" },
+            color: { value: "{colors.font.primary.value}" },
           },
           _hover: {
             backgroundColor: { value: "{colors.overlay.10.value}" },
-            color: { value: "{colors.overlay.50.value}" },
+            color: { value: "{colors.font.primary.value}" },
           },
           _disabled: {
-            backgroundColor: { value: "{colors.background.tertiary.value}" },
+            borderColor: { value: "{colors.border.disabled.value}" },
+            backgroundColor: { value: "{colors.background.disabled.value}" },
             color: { value: "{colors.font.disabled.value}" },
           },
           _pressed: {
             backgroundColor: { value: "{colors.brand.primary.80.value}" },
             borderColor: { value: "{colors.brand.primary.80.value}" },
-            color: { value: "{colors.white.value}" },
+            color: { value: "{colors.background.primary.value}" },
             _focus: {
               backgroundColor: { value: "{colors.border.focus.value}" },
               borderColor: { value: "{colors.border.focus.value}" },
+              color: { value: "{colors.background.primary.value}" },
             },
             _hover: {
               borderColor: { value: "{colors.brand.primary.60.value}" },
               backgroundColor: { value: "{colors.brand.primary.60.value}" },
+              boxShadow: { value: "{colors.brand.primary.60.value}" },
+              color: { value: "{colors.background.primary.value}" },
             },
           },
         },
         link: {
+          backgroundColor: { value: "{colors.transparent.value}" },
           color: { value: "{colors.overlay.50.value}" },
           _hover: {
             backgroundColor: { value: "{colors.transparent.value}" },
@@ -1125,11 +1952,19 @@ export default createTheme({
             backgroundColor: { value: "{colors.transparent.value}" },
             color: { value: "{colors.overlay.50.value}" },
           },
-          _disabled: { color: { value: "{colors.font.disabled.value}" } },
+          _disabled: {
+            backgroundColor: { value: "{colors.transparent.value}" },
+            color: { value: "{colors.font.disabled.value}" },
+          },
           _pressed: {
             backgroundColor: { value: "{colors.transparent.value}" },
             color: { value: "{colors.overlay.90.value}" },
+            _focus: {
+              backgroundColor: { value: "{colors.transparent.value}" },
+              color: { value: "{colors.overlay.90.value}" },
+            },
             _hover: {
+              color: { value: "{colors.overlay.90.value}" },
               backgroundColor: { value: "{colors.transparent.value}" },
             },
           },
@@ -1223,7 +2058,7 @@ export default createTheme({
         10: { value: "hsl(210, 5%, 98%)" },
         20: { value: "hsl(210, 5%, 94%)" },
         40: { value: "hsl(210, 5%, 87%)" },
-        60: { value: "hsl(210, 6%, 70%)" },
+        60: { value: "hsl(210, 10%, 58%)" },
         80: { value: "hsl(210, 10%, 40%)" },
         90: { value: "hsl(210, 25%, 25%)" },
         100: { value: "hsl(210, 50%, 10%)" },
@@ -1252,7 +2087,7 @@ export default createTheme({
         primary: { value: "{colors.neutral.100.value}" },
         secondary: { value: "{colors.neutral.90.value}" },
         tertiary: { value: "{colors.neutral.80.value}" },
-        disabled: { value: "{colors.font.tertiary.value}" },
+        disabled: { value: "{colors.neutral.60.value}" },
         inverse: { value: "{colors.white.value}" },
         interactive: { value: "{colors.brand.primary.80.value}" },
         hover: { value: "{colors.brand.primary.90.value}" },
@@ -1267,19 +2102,24 @@ export default createTheme({
         primary: { value: "{colors.white.value}" },
         secondary: { value: "{colors.neutral.10.value}" },
         tertiary: { value: "{colors.neutral.20.value}" },
+        quaternary: { value: "{colors.neutral.60.value}" },
         disabled: { value: "{colors.background.tertiary.value}" },
-        info: { value: "{colors.blue.20.value}" },
-        warning: { value: "{colors.orange.20.value}" },
-        error: { value: "{colors.red.20.value}" },
-        success: { value: "{colors.green.20.value}" },
+        info: { value: "{colors.blue.10.value}" },
+        warning: { value: "{colors.orange.10.value}" },
+        error: { value: "{colors.red.10.value}" },
+        success: { value: "{colors.green.10.value}" },
       },
       border: {
         primary: { value: "{colors.neutral.60.value}" },
         secondary: { value: "{colors.neutral.40.value}" },
         tertiary: { value: "{colors.neutral.20.value}" },
         disabled: { value: "{colors.border.tertiary.value}" },
+        pressed: { value: "{colors.brand.primary.100.value}" },
         focus: { value: "{colors.brand.primary.100.value}" },
         error: { value: "{colors.red.80.value}" },
+        info: { value: "{colors.blue.80.value}" },
+        success: { value: "{colors.green.80.value}" },
+        warning: { value: "{colors.orange.80.value}" },
       },
       shadow: {
         primary: { value: "hsla(210, 50%, 10%, 0.25)" },
@@ -1287,6 +2127,7 @@ export default createTheme({
         tertiary: { value: "hsla(210, 50%, 10%, 0.05)" },
       },
       overlay: {
+        5: { value: "hsla(0, 0%, 0%, 0.05)" },
         10: { value: "hsla(0, 0%, 0%, 0.1)" },
         20: { value: "hsla(0, 0%, 0%, 0.2)" },
         30: { value: "hsla(0, 0%, 0%, 0.3)" },

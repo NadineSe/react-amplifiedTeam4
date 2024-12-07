@@ -30,7 +30,6 @@ export default function ProductCard(props) {
       alignItems="flex-start"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(188,236,245,1)"
       {...getOverrideProps(overrides, "ProductCard")}
       {...rest}
     >

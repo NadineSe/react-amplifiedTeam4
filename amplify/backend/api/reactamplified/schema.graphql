@@ -1,15 +1,46 @@
-type Post @model @auth(rules: [{allow: public}]) {
+type Kalender @model @auth(rules: [{allow: public}]) {
   id: ID!
-  title: String!
-  description: String!
-  userID: ID!
+  Name: String
+  Benutzers: [Benutzer] @manyToMany(relationName: "KalenderBenutzer")
+  feiertagID: ID @index(name: "byFeiertag")
+  terminID: ID @index(name: "byTermin")
+  Farbe: String
+  termins: [Termin] @manyToMany(relationName: "TerminKalender")
+  feiertags: [Feiertag] @manyToMany(relationName: "FeiertagKalender")
+  todos: [Todo] @manyToMany(relationName: "TodoKalender")
 }
 
-type User @model @auth(rules: [{allow: public}]) {
+type Feiertag @model @auth(rules: [{allow: public}]) {
   id: ID!
-  name: String!
+  Titel: String
+  Datum: AWSDate
+  Kalenders: [Kalender] @manyToMany(relationName: "FeiertagKalender")
+}
+
+type Todo @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Titel: String
+  Datum: AWSDate
+  Erledigt: Boolean
+  Kalender: [Kalender] @manyToMany(relationName: "TodoKalender")
+}
+
+type Termin @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Titel: String
+  Datum: AWSDate
+  Von: AWSTime
+  Bis: AWSTime
+  Kalenders: [Kalender] @manyToMany(relationName: "TerminKalender")
+}
+
+type Benutzer @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Vorname: String!
   email: AWSEmail!
   userID: ID!
+  Nachname: String
+  kalenders: [Kalender] @manyToMany(relationName: "KalenderBenutzer")
 }
 
 type ProfileImage @model @auth(rules: [{allow: public}]) {
@@ -17,3 +48,4 @@ type ProfileImage @model @auth(rules: [{allow: public}]) {
   userID: ID
   image: ID
 }
+ 

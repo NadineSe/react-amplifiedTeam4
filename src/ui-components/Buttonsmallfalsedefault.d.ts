@@ -5,8 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
-import { FlexProps, SelectFieldProps } from "@aws-amplify/ui-react";
-import { ButtonsmallfalsedefaultProps } from "./Buttonsmallfalsedefault";
+import { FlexProps, TextProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -18,13 +17,11 @@ export declare type Variant = {
     overrides: EscapeHatchProps;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type FiltersOverridesProps = {
-    Filters?: PrimitiveOverrideProps<FlexProps>;
-    SelectField38963527?: PrimitiveOverrideProps<SelectFieldProps>;
-    SelectField38963544?: PrimitiveOverrideProps<SelectFieldProps>;
-    "Button/small/false/default"?: ButtonsmallfalsedefaultProps;
+export declare type ButtonsmallfalsedefaultOverridesProps = {
+    Buttonsmallfalsedefault?: PrimitiveOverrideProps<FlexProps>;
+    label?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
-export declare type FiltersProps = React.PropsWithChildren<Partial<FlexProps> & {
-    overrides?: FiltersOverridesProps | undefined | null;
+export declare type ButtonsmallfalsedefaultProps = React.PropsWithChildren<Partial<FlexProps> & {
+    overrides?: ButtonsmallfalsedefaultOverridesProps | undefined | null;
 }>;
-export default function Filters(props: FiltersProps): React.ReactElement;
+export default function Buttonsmallfalsedefault(props: ButtonsmallfalsedefaultProps): React.ReactElement;
